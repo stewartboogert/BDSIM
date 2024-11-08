@@ -11,8 +11,11 @@ simple_testing(io-store-trajectories     "--file=1_storeTrajectories.gmad"      
 simple_fail(io-invalid-sampler-name "--file=invalid_sampler_name.gmad")
 
 # trying to open outfile file in invalid location
-set(TESTING_ARGS --outfile=a/fictional/path/to/data)
-simple_fail(io-invalid-file-path  "--file=sm.gmad")
+if(BDSIM_GENERATE_REGRESSION_DATA)
+else()
+    set(TESTING_ARGS --outfile=a/fictional/path/to/data)
+    simple_fail(io-invalid-file-path  "--file=sm.gmad")
+endif()
 
 # unknown output format
 set(TESTING_ARGS --output=abcd)
