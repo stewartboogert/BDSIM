@@ -1,0 +1,9 @@
+beam,  particle="e-",
+       energy=1.5 * GeV,
+       distrType="gausstwiss",
+       betx=1,
+       bety=1,
+       alfx=2,
+       alfy=2,
+       emitx=100*mum,
+       emity=100*mum;
