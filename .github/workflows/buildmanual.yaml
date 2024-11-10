@@ -23,20 +23,20 @@ jobs:
         id: cpu-cores
 
       - name: Build manual
-	shell: bash
-	run: |
-          #
-          rm -rfv /usr/local/lib/Geant4-10.7.4/Geant4PackageCache.cmake
-
-          # ROOT
-          source /tmp/root/bin/thisroot.sh
-
-          # git trusted dir
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-
-          # build
-          mkdir /tmp/bdsim-build
-          mkdir /tmp/bdsim-install
-          cd /tmp/bdsim-build
-          cmake -DCMAKE_INSTALL_PREFIX=/tmp/bdsim-install $GITHUB_WORKSPACE
-	      make manual
+          shell: bash
+          run: |
+                #
+                rm -rfv /usr/local/lib/Geant4-10.7.4/Geant4PackageCache.cmake
+      
+                # ROOT
+                source /tmp/root/bin/thisroot.sh
+      
+                # git trusted dir
+                git config --global --add safe.directory $GITHUB_WORKSPACE
+      
+                # build
+                mkdir /tmp/bdsim-build
+                mkdir /tmp/bdsim-install
+                cd /tmp/bdsim-build
+                cmake -DCMAKE_INSTALL_PREFIX=/tmp/bdsim-install $GITHUB_WORKSPACE
+                make manual
