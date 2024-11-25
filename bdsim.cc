@@ -32,10 +32,14 @@ along with BDSIM.  If not, see <http://www.gnu.org/licenses/>.
 #include "BDSIMClass.hh"
 #include "BDSException.hh"
 
+#include "BDSFieldEMAxialElectric.hh"
+
 #include <iostream>
 
 int main(int argc, char** argv)
 {
+  auto ef = BDSFieldEMAxialElectric(1.0, 0.1, 0.938, 0, 0, true, 800e6, 0);
+
   BDSIM* bds = nullptr;
   try
     {
