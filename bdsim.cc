@@ -32,14 +32,19 @@ along with BDSIM.  If not, see <http://www.gnu.org/licenses/>.
 #include "BDSIMClass.hh"
 #include "BDSException.hh"
 
-#include "BDSFieldEMAxialElectric.hh"
+#include "BDSFieldEMAxialStandingApprox.hh"
 
 #include <iostream>
 
 int main(int argc, char** argv)
 {
-  auto ef = BDSFieldEMAxialElectric(1.0, 0.1, 0.938, 0, 0, true, 800e6, 0);
-  G4cout << ef.MinE(1, 200) << std::endl;
+  auto f = BDSFieldEMAxialStandingApprox(10, // voltage
+                                         0, // cavityPhase
+                                         1, // number of cells
+                                         M_PI, // phase advance per cell
+                                         0.2, // cell length
+                                         0); // sychronousT );
+
   BDSIM* bds = nullptr;
   try
     {
