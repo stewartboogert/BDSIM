@@ -40,7 +40,7 @@ along with BDSIM.  If not, see <http://www.gnu.org/licenses/>.
 
 int main(int argc, char** argv)
 {
-  auto f = BDSFieldEMAxialStandingApprox(10, // voltage
+  // auto f = BDSFieldEMAxialStandingApprox(10, // voltage
                                          0, // cavityPhase
                                          5, // number of cells
                                          M_PI, // phase advance per cell
