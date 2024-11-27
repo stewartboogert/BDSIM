@@ -40,14 +40,6 @@ along with BDSIM.  If not, see <http://www.gnu.org/licenses/>.
 
 int main(int argc, char** argv)
 {
-  // auto f = BDSFieldEMAxialStandingApprox(10, // voltage
-                                         0, // cavityPhase
-                                         5, // number of cells
-                                         M_PI, // phase advance per cell
-                                         0.2, // cell length
-                                         0); // sychronousT );
-  // auto ef = BDSFieldEMAxialElectric(1.0, 0.1, 0.938, 0, 0, true, 800e6, 0);
-
   BDSIM* bds = nullptr;
   try
     {
